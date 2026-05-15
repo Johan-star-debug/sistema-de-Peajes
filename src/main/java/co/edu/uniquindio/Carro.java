@@ -1,9 +1,11 @@
 package co.edu.uniquindio;
+
 public class Carro extends Vehiculo {
 
     private boolean electrico;
     private boolean servicioPublico;
 
+    // Constructor correcto
     public Carro(String placa, Conductor conductor,
                  boolean electrico, boolean servicioPublico) {
         super(placa, conductor);
@@ -16,13 +18,22 @@ public class Carro extends Vehiculo {
         double valor = 10000;
 
         if (electrico) {
-            valor *= 0.80;
+            valor *= 0.80; // 20% de descuento
         }
 
         if (servicioPublico) {
-            valor *= 1.15;
+            valor *= 1.15; // 15% de incremento
         }
 
         return valor;
+    }
+
+    // Getters opcionales
+    public boolean isElectrico() {
+        return electrico;
+    }
+
+    public boolean isServicioPublico() {
+        return servicioPublico;
     }
 }
