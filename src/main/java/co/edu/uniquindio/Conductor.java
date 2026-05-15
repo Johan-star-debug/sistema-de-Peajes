@@ -3,12 +3,8 @@ package co.edu.uniquindio;
         import java.util.ArrayList;
         import java.util.List;
 
-        record Conductor(
-        String nombre,
-                        String apellidos,
-                        String documento,
-                        LocalDate fechaNacimiento,
-                        List<Vehiculo> vehiculos
+        public record Conductor(
+        String nombre, String apellidos, String documento, LocalDate fechaNacimiento, List<Vehiculo> vehiculos
 ) {
 
     // Constructor compacto para inicializar la lista de vehículos
